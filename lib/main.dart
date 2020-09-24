@@ -13,53 +13,24 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.red[600],
       ),
-      body: Center(
-        //clickable icon buttons
-        child: IconButton(
-          onPressed: () {
-            print('you clicked me');
-          },
-          icon: Icon(Icons.alternate_email),
-          color: Colors.amber,
-        ),
 
-        /*
-        //button with icon
-        child: RaisedButton.icon( 
-          onPressed: () {
-            print('you clicked me');
-          },
-          icon: Icon(
-            Icons.mail,
-            color: Colors.blue[900],
-          ),
-          label: Text(
-            'Mail me',
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: Colors.blue[800]
-            ),
-          ),
-          color: Colors.amber,
-        ),
+      body: Padding( //padding widget
+        padding: EdgeInsets.all(90.0),
+        child: Text('hello'),
+      ),
       
-        //button
-        child: FlatButton(
-          onPressed: () {
-            print('you clicked me');
-          },
-          child: Text('click me'),
-          color: Colors.lightBlue,
-        ),
-       
-      //Icon
-      child: Icon(
-        Icons.airport_shuttle,
-        color: Colors.lightBlue,
-        size: 50.0
+      /*
+      //container widget
+      Container(
+        //padding effects inside the container while margin effects aroung the container
+        //padding: EdgeInsets.all(20.0),
+        //padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+        padding: EdgeInsets.fromLTRB(10.0, 20.0, 30.0, 40.0),
+        margin: EdgeInsets.all(30.0), //same principle as padding
+        color: Colors.grey[400],
+        child: Text('hello'),
       ),
       */
-      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         child: Text('click'),
