@@ -14,47 +14,34 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.red[600],
       ),
 
-      body: Row(
-        //for horizontal
-        //mainAxisAlignment: MainAxisAlignment.center,
-        //mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        //mainAxisAlignment: MainAxisAlignment.end,
-        //mainAxisAlignment: MainAxisAlignment.spaceAround,
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-
-        //for vertical
-        //crossAxisAlignment: CrossAxisAlignment.center,
-        //crossAxisAlignment: CrossAxisAlignment.end,
-
-        crossAxisAlignment: CrossAxisAlignment.start,
-        
-        children: <Widget>[
-          Text('hello, world'),
-          FlatButton(
-            onPressed: () {},
-            color: Colors.amber,
-            child: Text('Click me')
+      body: Column(
+        // In columns, mainAxisAlignment is vertical while crossAxisAlignment is horizontal
+        mainAxisAlignment: MainAxisAlignment.end,
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: [
+          Row(
+            children: [
+              Text('hello'),
+              Text(' world')
+            ],
           ),
           Container(
+            padding: EdgeInsets.all(20.0),
             color: Colors.cyan,
+            child: Text('one'),
+          ),
+          Container(
             padding: EdgeInsets.all(30.0),
-            child: Text('inside container'),
+            color: Colors.pinkAccent,
+            child: Text('two'),
+          ),
+          Container(
+            padding: EdgeInsets.all(40.0),
+            color: Colors.amber,
+            child: Text('three'),
           ),
         ],
-        ),
-      
-      /*
-      //container widget
-      Container(
-        //padding effects inside the container while margin effects aroung the container
-        //padding: EdgeInsets.all(20.0),
-        //padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
-        padding: EdgeInsets.fromLTRB(10.0, 20.0, 30.0, 40.0),
-        margin: EdgeInsets.all(30.0), //same principle as padding
-        color: Colors.grey[400],
-        child: Text('hello'),
       ),
-      */
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         child: Text('click'),
