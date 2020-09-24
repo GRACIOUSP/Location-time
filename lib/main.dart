@@ -14,33 +14,37 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.red[600],
       ),
 
-      body: Column(
-        // In columns, mainAxisAlignment is vertical while crossAxisAlignment is horizontal
-        mainAxisAlignment: MainAxisAlignment.end,
-        crossAxisAlignment: CrossAxisAlignment.end,
-        children: [
-          Row(
+      body: Row(
             children: [
-              Text('hello'),
-              Text(' world')
+              Expanded(
+                child: Image.asset('images/img2.jpg'),
+                flex: 3,
+              ),
+              Expanded(
+                flex: 1,
+                child: Container(
+                  padding: EdgeInsets.all(30.0),
+                  color: Colors.cyan,
+                  child: Text('1')
+                ),
+              ),
+              Expanded(
+                flex: 1,
+                child: Container(
+                  padding: EdgeInsets.all(30.0),
+                  color: Colors.pinkAccent,
+                  child: Text('2')
+                ),
+              ),
+              Expanded(
+                flex: 1,
+                child: Container(
+                  padding: EdgeInsets.all(30.0),
+                  color: Colors.amber,
+                  child: Text('3')
+                ),
+              ),
             ],
-          ),
-          Container(
-            padding: EdgeInsets.all(20.0),
-            color: Colors.cyan,
-            child: Text('one'),
-          ),
-          Container(
-            padding: EdgeInsets.all(30.0),
-            color: Colors.pinkAccent,
-            child: Text('two'),
-          ),
-          Container(
-            padding: EdgeInsets.all(40.0),
-            color: Colors.amber,
-            child: Text('three'),
-          ),
-        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
